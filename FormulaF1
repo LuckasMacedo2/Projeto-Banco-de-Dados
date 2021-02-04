@@ -1,0 +1,25 @@
+CREATE TABLE pilotos (
+	codigo smallint,
+    nome text,
+    pais varchar(30),
+    idade smallint,
+    equipe varchar(30),
+    motor varchar(30),
+    pontos int
+);
+
+SELECT * FROM pilotos;
+
+SELECT * FROM pilotos where pontos <20 and pontos > 10;
+
+ALTER TABLE pilotos ADD CONSTRAINT codigoPiloto UNIQUE (codigo);/*Adicionar restrição */
+
+INSERT INTO pilotos VALUES (360,'JÃO','JÁLÂNDIA', 999, 'JOSEFA','J1',0);
+
+SELECT nome, pais, codigo FROM pilotos ORDER BY nome DESC;
+
+SELECT * FROM pilotos ORDER BY pais;
+
+DELETE FROM pilotos where pais = 'Alemanha';
+
+

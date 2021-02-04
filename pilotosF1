@@ -1,0 +1,56 @@
+ALTER TABLE pilotosF1 
+ALTER COLUMN matricula TYPE decimal(5);
+
+SELECT * FROM PilotosF1;
+
+ALTER TABLE pilotosF1 RENAME idadeERRO to idade;
+ALTER TABLE pilotosF1
+ALTER COLUMN idade TYPE decimal(3);
+
+SELECT * FROM PilotosF1;
+
+ALTER TABLE pilotosf1 RENAME equipeERRO to equipe;
+ALTER TABLE pilotosf1 RENAME motorERRO to motor; 
+alter table pilotosf1 RENAME pontosERRO TO pontos;
+
+ALTER TABLE pilotosF1
+ALTER COLUMN equipe TYPE varchar(20);
+
+ALTER TABLE PilotosF1 
+alter column idade type decimal(3);
+
+ALTER TABLE PilotosF1 RENAME moto TO motor;
+
+ALTER TABLE PilotosF1
+ALTER COLUMN motor TYPE varchar(30);
+
+ALTER TABLE PilotosF1
+ALTER COLUMN pontos TYPE decimal(4);
+
+INSERT INTO PilotosF1 VALUES (121, 'Adrian Sutil', 'Alemanha', '24', 'ForceIndia', 'Mercedes', 22);
+
+SELECT * FROM PilotosF1;
+
+INSERT INTO PilotosF1 VALUES (136, 'Bruno Senna', 'Brasil', '21', 'Hispanica', 'Cosworth', 22);
+
+INSERT INTO PilotosF1 VALUES (240, 'Carlos Sainz Jr','Espanha', '22', 'Toro Rosso', 'Renault', 65);
+
+INSERT INTO PilotosF1 VALUES (135, 'Christian Klien','Australia', '20', 'Hispanica', 'Cosworth',13);
+
+UPDATE PilotosF1 SET motor='Toyota' where equipe='ForceIndia';
+
+UPDATE PilotosF1 SET pontos=100 where nome='Adrian Sutil';
+
+SELECT * FROM PilotosF1;
+
+UPDATE PilotosF1 SET pais='Japao' where motor='Toyota';
+
+UPDATE PilotosF1 SET idade='45' where idade>'0';
+
+DELETE FROM PilotosF1 WHERE matricula=121;
+
+DELETE FROM PilotosF1 WHERE equipe = 'Hispanica';
+
+DELETE FROM PilotosF1 WHERE equipe = 'Alemanha';
+
+

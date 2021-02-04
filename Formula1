@@ -1,0 +1,20 @@
+CREATE TABLE Pilotos (
+	codigo int,
+    nome text,
+    pais varchar(30),
+    idade smallint,
+    equipe varchar(30),
+    motor varchar(15)
+)
+
+
+INSERT INTO Pilotos
+VALUES 	(1234,'Tsuna', 'Italia',27,'Vongola','Bom pra nada');
+
+
+INSERT INTO Pilotos
+VALUES 	(1234,'Bradock', 'Brasil',10,'Melhor do mundo','Ganha Bem');
+
+
+SELECT *FROM Pilotos WHERE idade>15;
+

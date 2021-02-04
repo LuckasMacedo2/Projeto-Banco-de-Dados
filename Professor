@@ -1,0 +1,23 @@
+CREATE TABLE Professor (
+	matricula decimal(15),
+    nome text,
+    lotacao smallint,
+    titulacao varchar(30),
+    categoria varchar(30),
+    dataAdmissao decimal(8),
+    cargaHoraria int,
+    cargaHAlocada int
+);
+
+
+INSERT INTO Professor
+VALUES (0912312322, 'Ruanzito', 19, 'mestre doutor', 'Boa', 12032016, 24, 20);
+
+
+INSERT INTO Professor
+VALUES (123123123, 'Ruanzita', 23, 'mestra', 'ruim', 03122016, 39, 44);
+
+SELECT * FROM Professor;
+
+
+

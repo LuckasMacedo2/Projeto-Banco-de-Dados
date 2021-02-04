@@ -1,0 +1,29 @@
+CREATE TABLE Professor (
+	atuante varchar(5),
+    matricula int unique,
+    nome text,
+    escola varchar(30),
+    titulacao varchar(30),
+    tipoContrato varchar(30)
+
+);
+
+ALTER TABLE Professor RENAME TO Professores;
+
+ALTER TABLE Professores RENAME titulacao TO titulo;
+
+ALTER TABLE Professores ADD sala int;
+
+ALTER TABLE Professores ALTER COLUMN sala TYPE varchar(10);
+
+SELECT * FROM Professores;
+
+ALTER TABLE Professores DROP sala;
+
+UPDATE Professores SET sala='A099' WHERE tipoContrato='Horista';
+
+DELETE FROM Professores WHERE escola = 'MAF' AND sala = 'A099';
+
+SELECT escola FROM Professores ORDER BY escola;
+
+

@@ -1,0 +1,43 @@
+CREATE TABLE professor (
+	atuante varchar(10),
+	mat decimal(15),
+	nome text,
+    escola text,
+    titulacao varchar(30),
+    tipoContrato varchar(30)
+);
+
+SELECT * FROM professor;
+
+SELECT nome FROM professor ORDER BY nome;
+
+SELECT * FROM professor ORDER BY nome;
+
+SELECT * FROM professor ORDER BY nome DESC;
+
+SELECT nome, mat FROM professor WHERE atuante = 'SIM';
+
+SELECT nome FROM professor GROUP BY nome; /*Seleciona grupo de nomes*/
+
+SELECT nome FROM professor GROUP BY nome ORDER BY nome; /*Seleciona grupo de nomes ordenados por nomes*/
+
+INSERT INTO professor VALUES ('SIM',1954,'ARTHUR JUNQUEIRA CANADO','CMP','Doutor(a)','TI');
+
+SELECT DISTINCT ON (nome) nome FROM professor; /*Seleciona todos os atributos especificados depois do parenteses, e o
+atributo dentro do parenteses serve como base para não listar todos que tiverem aquele atributo repetido*/
+
+INSERT INTO professor VALUES ('SIM',18030,'PLINIO PIERRY BORGES MOTA','CBM','Especialista','Horista');
+
+INSERT INTO professor VALUES ('SIM',17374,'MIRELLA ESTHER DA SILVA','CBM','Mestre(a)','Horista');
+
+SELECT mat, count (*) FROM professor GROUP BY mat HAVING count(*)>1; 
+
+/*Para evitar isso basta definir o atributo que não deve ser repetido e defini-lo como unique*/
+
+DELETE FROM professor WHERE nome, count (*) FROM professor GROUP BY mat HAVING count(*)>1;
+
+
+
+
+
+
